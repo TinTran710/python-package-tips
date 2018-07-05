@@ -26,6 +26,16 @@ $ pip install git+git://github.com/something/somewhat.git
 $ pip install -r requirements.txt
 ```
 
+### Ví dụ về khai báo package trong requirements.txt
+
+```
+underthesea==1.1.8
+flask==1.0.2
+html2text==2018.1.9
+requests==2.19.1
+-e git://github.com/TinTran710/textrank-1#egg=textrank
+```
+
 ### Sử dụng pip để cài đặt package từ các private repository
 
 **Cài đặt package từ private github repository:**
@@ -104,14 +114,3 @@ $ pip install git+ssh://git@GitLab/my_name/my_repo.git
 ```
 
 Đến lúc này package sẽ được tải về mà ta không cần nhập password
-
-
-### Ví dụ về khai báo package trong requirements.txt
-
-```
-underthesea==1.1.8
-flask==1.0.2
-html2text==2018.1.9
-requests==2.19.1
--e git://github.com/TinTran710/textrank-1#egg=textrank
-```
