@@ -33,7 +33,7 @@ $ pip install -r requirements.txt
 $ pip install git+ssh://git@github.com/echweb/echweb-utils.git
 ```
 - Cách này yêu cầu chúng ta set username cho git.
-- Lưu ý: Thay dấu `:` thành dấu `/` trong kết quả từ việc chạy câu lệnh `git remote -v` trước khi sử dụng địa chỉ đó vào trong câu lệnh `pip`: 
+- Lưu ý: Khi chạy `git remote -v`, hãy thay dấu `:` thành dấu `/` trong kết quả trước khi sử dụng địa chỉ đó vào trong câu lệnh `pip`: 
 
 ```
 $ git remote -v
@@ -65,6 +65,7 @@ $ pip install git+ssh://git@bitbucket.org/username/projectname.git
 Trường hợp này pip cũng sẽ sử dụng SSH key
 
 **Cài đặt package từ private GitLab repository:**
+
 Cách này sử dụng GitLab Deploy keys và SSH config file để ta có thể deploy sử dụng key khác với SSH key cá nhân.
 
 - Khởi tạo SSH Key mới
@@ -83,7 +84,8 @@ Câu lệnh sau sẽ báo SSH sử dụng deploy key mới để thiết lập k
 ssh -T -i ~/.ssh/GitLab_Robot_Deploy_Key git@gitlab.mycorp.com
 ```
 - Tạo SSH Config File
-Sử dụng trình soạn thảo để tạo file `~/.ssh/config`. Thêm nội dung sau vào. Giá trị cho 'Host' có thể là bất kỳ (nhưng hãy nhớ rằng giá trị này bạn sẽ sử dụng sau này). "HostName" là URL tới GitLab instance. "IdentifyFile" là đường dẫn tới file SSH key mà bạn tạo ra ở bước trên.
+
+Sử dụng trình soạn thảo để tạo file `~/.ssh/config`. Thêm nội dung sau vào: Giá trị cho 'Host' có thể là bất kỳ (nhưng hãy nhớ rằng giá trị này bạn sẽ sử dụng sau này). "HostName" là URL tới GitLab instance. "IdentifyFile" là đường dẫn tới file SSH key mà bạn tạo ra ở bước trên.
 
 ```
 Host GitLab
