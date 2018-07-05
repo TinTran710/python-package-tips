@@ -1,4 +1,4 @@
-## Các lưu ý khi làm việc với package (module) trong python
+# Các lưu ý khi làm việc với package (module) trong python
 
 ### Pip
 Pip là công cụ quản lý các package của python
